@@ -1,0 +1,19 @@
+title: Fliperama Espaço Colaborativo
+email: fliperama@fliperamaec.com.br
+description: >
+  Espaço de trabalho compartilhado para profissionais autônomos, startups, pequenas e médias empresas.
+base_url: ""
+url: "http://www.fliperamaec.com.br"
+
+markdown: redcarpet
+redcarpet:
+  extensions: ['smart', 'tables', 'with_toc_data']
+
+exclude: [CNAME, LICENSE, Gemfile, Gemfile.lock, README.md]
+
+sass:
+  sass_dir: assets/stylesheets
+  style: compressed
+
+permalink: /essays/:year/:title/
+
