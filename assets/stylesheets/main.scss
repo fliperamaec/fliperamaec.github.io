@@ -4,3 +4,60 @@
 @import "bootstrap/bootstrap";
 @import "now-ui-kit";
 @import "demo";
+
+.hero {
+  background-image: url('/assets/images/hero-background.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100vh;
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: black;
+    opacity: 0.2;
+    z-index: 0;
+  }
+
+  .hero-row {
+    position: relative;
+    z-index: 1;
+
+    .hero-col {
+      h1 {
+        text-transform: uppercase;
+        color: white;
+        font-size: 70px;
+        font-weight: 700;
+        line-height: 85px;
+        margin-bottom: 70px;
+      }
+
+      p.hero-message {
+        color: white;
+        font-size: 24px;
+        font-weight: 300;
+        margin: 0 auto;
+        width: 75%;
+      }
+    }
+  }
+
+  .hero-arrow {
+    color: white;
+    font-size: 42px;
+    font-weight: 600;
+    text-align: center;
+    position: absolute;
+    bottom: 30px;
+  }
+}
