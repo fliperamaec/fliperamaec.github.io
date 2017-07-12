@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<div class="profile-page">
+  <div class="wrapper">
+    <div class="page-header page-header-small" filter-color="orange">
+      <div class="page-header-image" data-parallax="true" style="background-image: url('/assets/images/hero-background.jpg');">
+      </div>
+    </div>
+    <div class="section">
+      <div class="container post-container">
+        <article>
+          <header class="post-header text-xs-center">
+            <div class="post-meta">
+              <div class="post-date-feature">
+                <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                  {{ page.date | date: "%b %-d, %Y" }}
+                </time>
+              </div>
+              <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+              {% if page.author %}
+              <p>
+                • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+                  <span itemprop="name">{{ page.author }}</span>
+                </span> •
+              </p>
+              {% endif %}
+            </div>
+          </header>
+          <div class="post-content" itemprop="articleBody">
+            {{ content }}
+          </div>
+          {% for tag in page.tags %}
+            <li>
+              <a href="#">{{ tag }}</a>
+            </li>
+          {% endfor %}
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
