@@ -5,6 +5,19 @@
 @import "now-ui-kit";
 @import "demo";
 
+//NAVBAR
+.navbar-nav {
+  font-size: 25px;
+}
+
+.nav-divider {
+  color: white;
+}
+
+.nav-link {
+  text-transform: lowercase;
+}
+
 // HERO
 .hero {
   background-image: url('/assets/images/hero-background.jpg');
