@@ -5,6 +5,29 @@
 @import "now-ui-kit";
 @import "demo";
 
+//NAVBAR
+.underline-on-hover:hover{
+  text-decoration: underline;
+}
+
+.navbar-nav {
+  font-size: 25px;
+}
+
+.navbar{
+  .navbar-toggler{
+    height: 40px;
+  }
+}
+
+.navbar-logo {
+  width: 90px;
+}
+
+.nav-link {
+  text-transform: lowercase;
+}
+
 // HERO
 .hero {
   background-image: url('/assets/images/hero-background.jpg');
