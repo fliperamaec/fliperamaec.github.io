@@ -6,12 +6,22 @@
 @import "demo";
 
 //NAVBAR
+.underline-on-hover:hover{
+  text-decoration: underline;
+}
+
 .navbar-nav {
   font-size: 25px;
 }
 
-.nav-divider {
-  color: white;
+.navbar{
+  .navbar-toggler{
+    height: 40px;
+  }
+}
+
+.navbar-logo {
+  width: 90px;
 }
 
 .nav-link {
