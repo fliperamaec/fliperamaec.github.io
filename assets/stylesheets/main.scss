@@ -55,6 +55,15 @@
   .hero-row {
     position: relative;
     z-index: 1;
+    display: block;
+
+    .hero-logo {
+      z-index: 1000;
+      display: block;
+      img {
+        vertical-align: 100px;
+      }
+    }
 
     .hero-col {
       h1 {
