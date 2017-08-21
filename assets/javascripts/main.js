@@ -15,12 +15,12 @@
   }
 
   function initAnchorLinks() {
-    $('.js-anchor-link').on('click', function(event) {
+    $('.js-anchor-link').on('click', 'a', function(event) {
       event.preventDefault();
 
       $('html, body').animate({
         scrollTop: $($.attr(this, 'href')).offset().top
-      }, 1000);
+      }, 500);
     });
   }
 
@@ -33,8 +33,23 @@
     animateHeader();
   });
 
+  function myMap() {
+    var myLatLng = { lat: -26.2893037, lng: -48.8451019 }
+    var mapProp= {
+        center:new google.maps.LatLng(-26.2893037,-48.8451019),
+        zoom:15,
+    };
+    var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    var marker = new google.maps.Marker({
+      position: myLatLng,
+      map: map,
+      title: 'Estamos aqui!'
+    });
+  }
+
   $(function() {
     initAnchorLinks();
     scrollToTopOnVisit();
+    myMap();
   })
 })(jQuery);
