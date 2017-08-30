@@ -1,5 +1,26 @@
 ---
 layout: default
+slides:
+  - picture: assets/images/spot.jpg
+    title: SPOT
+    description: Seja um Fliper e conheça nosso espaço. Ambiente Profissional 24 horas com Segurança e Comodidade. Colaboração e Networking. Endereço Comercial e Fiscal. Planos Facilitados e Adaptáveis ao seu perfil.
+    link: /price_table.html
+  - picture: assets/images/auditorio.jpg
+    title: AUDITÓRIO
+    description: Auditório para até 50 pessoas. Espaço para descompressão e confraternização. Sala de Treinamento, Palestras e Workshop. Televisão, home theater, internet fibra-ótica, banheiro independente ótima localização e muito mais.
+    link: /price_table.html
+  - picture: assets/images/salas-reuniao.jpg
+    title: SALAS DE REUNIÃO
+    description: Salas multi-uso, salas de jogos, salas de reunião grande, média e pequena. Podendo se adaptar conforme cada necessidade. Wi-Fi, cozinha e Recepção.
+    link: /price_table.html
+  - picture: assets/images/endereco-fiscal.jpg
+    title: ENDEREÇO FISCAL
+    description: Endereço Fiscal e Comercial. Recepcionista, Telefone, Recados. Ótima Localização com Praça de Alimentação do BIG da Beira Rio -400m  + dois restaurantes -200m. 3 Opções de Estacionamento nos arredores.
+    link: /price_table.html
+  - picture: assets/images/sala-privativa.jpg
+    title: SALAS PRIVATIVAS
+    description: Salas Privativas para até 6 SPOTS. Melhor custo benefício. Ambiente profissional. Comodidade e descontração. 24 horas. Colaboração e Networking. Internet Fibra ótica. 18 metros quadrados.
+    link: /price_table.html
 ---
 
 <header class="hero">
@@ -18,7 +39,7 @@ layout: default
     <div class="row justify-content-md-center">
       <div class="col-md-12 col-lg-8">
         <h2 class="title">Prepare-se para decolar!!!</h2>
-          <h5 class="description">The kit comes with three pre-built pages to help you get started faster. You can change the text and images and you're good to go. More importantly, looking at them will give you a picture of what you can built with this powerful Bootstrap 4 ui kit.</h5>
+          <h5 class="description">Seu espaço de negócios e relacionamento. Aqui você tem espaço para estabelecer seu negócio, começar sua start-up, fazer reuniões, empreender crescer e decolar.</h5>
       </div>
     </div>
   </div>
@@ -27,80 +48,45 @@ layout: default
 <div class="section" id="carousel">
   <div id="carouselExampleControls" class="carousel slide">
     <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1" class=""></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2" class=""></li>
+      {% for slide in page.slides %}
+        {% if forloop.first %}
+          {% assign class = 'active' %}
+        {% else %}
+          {% assign class = '' %}
+        {% endif %}
+        <li class="{{class}}"></li>
+      {% endfor %}
     </ol>
+
     <div class="carousel-inner" role="listbox">
-      <div class="carousel-item carousel-item-next carousel-item-left">
-        <div class="item-description">
-          <div class="row title">
-            <div class="col-md-12 text-center"> SPOT </div>
-          </div>
-          <div class="row description hide-990px">
-            <div class="col-md-12 text-center">
-              <p>
-                A leitura é uma necessidade biológica da espécie. Nenhum ecrã e nenhuma tecnologia conseguirão suprimir a necessidade de leitura tradicional.
-                Imagem / Comentários
-              </p>
+      {% for slide in page.slides %}
+        {% if forloop.first %}
+          <div class="carousel-item active">
+        {% else %}
+          <div class="carousel-item">
+        {% endif %}
+          <div class="item-description">
+            <div class="row title position-title-990px">
+              <div class="col-md-12 text-center">{{ slide.title }}</div>
+            </div>
+            <div class="row description hide-990px">
+              <div class="col-md-12 text-center">
+                <p class="">{{ slide.description }}</p>
+              </div>
+            </div>
+            <div class="row link position-link-990px">
+              <div class="col-md-12 text-center">
+                <a href="{{ slide.link }}">
+                  <button class="btn btn-primary btn-round">Saiba mais</button>
+                </a>
+              </div>
             </div>
           </div>
-          <div class="row link">
-            <div class="col-md-12 text-center">
-              <button class="btn btn-primary btn-round">Saiba mais</button>
-            </div>
+          <img class="d-block" src="{{ slide.picture }}" alt="First slide">
+          <div class="carousel-caption d-none d-md-block">
           </div>
         </div>
-        <img class="d-block" src="assets/images/bg1.jpg" alt="First slide">
-        <div class="carousel-caption d-none d-md-block">
-        </div>
-      </div>
-      <div class="carousel-item">
-        <div class="item-description">
-          <div class="row title">
-            <div class="col-md-12 text-center"> EVENTOS </div>
-          </div>
-          <div class="row description hide-990px">
-            <div class="col-md-12 text-center">
-              <p>
-                A leitura é uma necessidade biológica da espécie. Nenhum ecrã e nenhuma tecnologia conseguirão suprimir a necessidade de leitura tradicional.
-                Imagem / Comentários
-              </p>
-            </div>
-          </div>
-          <div class="row link">
-            <div class="col-md-12 text-center">
-              <button class="btn btn-primary btn-round">Saiba mais</button>
-            </div>
-          </div>
-        </div>
-        <img class="d-block" src="assets/images/bg3.jpg" alt="Second slide">
-        <div class="carousel-caption d-none d-md-block">
-        </div>
-      </div>
-      <div class="carousel-item active carousel-item-left">
-        <div class="item-description">
-          <div class="row title">
-            <div class="col-md-12 text-center"> CULTURA </div>
-          </div>
-          <div class="row description hide-990px">
-            <div class="col-md-12 text-center">
-              <p>
-                A leitura é uma necessidade biológica da espécie. Nenhum ecrã e nenhuma tecnologia conseguirão suprimir a necessidade de leitura tradicional.
-                Imagem / Comentários
-              </p>
-            </div>
-          </div>
-          <div class="row link">
-            <div class="col-md-12 text-center">
-              <button class="btn btn-primary btn-round">Saiba mais</button>
-            </div>
-          </div>
-        </div>
-        <img class="d-block" src="assets/images/bg4.jpg" alt="Third slide">
-        <div class="carousel-caption d-none d-md-block">
-        </div>
-      </div>
+      {% endfor %}
     </div>
     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
     </a>

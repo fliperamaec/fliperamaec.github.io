@@ -1,0 +1,408 @@
+---
+permalink: price_table
+layout: page
+title: Serviços
+spaces: Salas de Reunião
+
+rooms:
+  - title: Sala Pequena
+    capacity: 6
+    kitchen: yes
+    internet: yes
+    private_bathroom:
+    media: yes
+    private_fridge:
+    value_business_hours: 30/hora
+    value_weekends: 60/hora
+  - title: Sala Grande
+    capacity: 10
+    kitchen: yes
+    internet: yes
+    private_bathroom: yes
+    media: yes
+    private_fridge: yes
+    value_business_hours: 50/hora
+    value_weekends: 80/hora
+  - title: Sala Integrada
+    capacity: 20
+    kitchen: yes
+    internet: yes
+    private_bathroom: yes
+    media: yes
+    private_fridge: yes
+    value_business_hours: 80/hora
+    value_weekends: 140/hora
+  - title: Auditório
+    capacity: 20 a 40
+    kitchen: yes
+    internet: yes
+    private_bathroom: yes
+    media: yes
+    private_fridge:
+    value_business_hours: 120/hora*
+    value_weekends: 150/hora*
+services:
+  - title: ENDEREÇO FISCAL
+    access_hours:
+    access_type:
+    mail: Gerenciamento de correspondência (exceto para grandes encomendas)
+    internet:
+    receive_phone_calls: Atendimento telefônico padrão (anotar recados)
+    make_phone_calls:
+    spot:
+    drawer:
+    reception:
+    printing:
+    kitchen:
+    fliper_market:
+    meeting_room: Uso das Salas de Reunião mediante reserva e pagamento à parte
+    decision_making:
+    value: R$ 80,00/mês ou R$ 800,00/ano
+  - title: HORA LIVRE
+    access_hours: Dias Úteis em Horário Comercial 8h às 18h
+    access_type: Cartão na recepção do prédio a cada entrada/saída
+    mail:
+    internet: Acesso a internet
+    receive_phone_calls:
+    make_phone_calls:
+    spot: Spot Individual disponível
+    drawer:
+    reception:
+    printing: Impressão/Scanner A4 PeB pago à parte
+    kitchen: Copa de apoio, água e café
+    fliper_market: Fliper Mercado pago  na hora
+    meeting_room: Uso das Salas de Reunião mediante reserva e pagamento à parte
+    decision_making:
+    value: R$ 8,00/hora
+  - title: PACOTE 40 HORAS
+    access_hours: Dias Úteis em Horário Comercial 8h às 18h
+    access_type: Cartão na recepção do prédio a cada entrada/saída
+    mail:
+    internet: Acesso a internet
+    receive_phone_calls:
+    make_phone_calls:
+    spot: Spot Individual disponível
+    drawer:
+    reception:
+    printing: Impressão/Scanner A4 PB pago à parte
+    kitchen: Copa de apoio, água e café
+    fliper_market: Fliper Mercado pago  na hora
+    meeting_room: Uso das Salas de Reunião mediante reserva e pagamento à parte
+    decision_making:
+    value: R$ 280,00/mês
+  - title: PACOTE 80 HORAS
+    access_hours: Dias Úteis em Horário Comercial 8h às 18h
+    access_type: Cartão na recepção do prédio a cada entrada/saída
+    mail:
+    internet: Acesso a internet
+    receive_phone_calls:
+    make_phone_calls:
+    spot: Spot Individual disponível
+    drawer:
+    reception:
+    printing: Impressão/Scanner A4 PB pago à parte
+    kitchen: Copa de apoio, água e café
+    fliper_market: Fliper Mercado pago  na hora
+    meeting_room: Uso das Salas de Reunião mediante reserva e pagamento à parte
+    decision_making:
+    value: R$ 400,00/mês
+  - title: MEMBRO
+    access_hours: Todos os dias, 24hrs por dia
+    access_type: Liberação automática através de biometria
+    mail: Gerenciamento de correspondência
+    internet: Acesso a internet de alta velocidade
+    receive_phone_calls: Atendimento telefônico padrão (anotar recados e passar a ligação)
+    make_phone_calls: Uso livre do telefone para ligações para fixo
+    spot: Spot Individual fixo
+    drawer: Gaveteiro individual
+    reception: Serviço de Recepção padrão (anotar recados e receber clientes)
+    printing: Impressão/Scanner A4 PB sem custo adicional
+    kitchen: Copa de apoio, água e café
+    fliper_market: Fliper Mercado pago  por mês
+    meeting_room: Uso das Salas de Reunião mediante reserva
+    decision_making: Comunidade Fliperama (participação na gestão do espaço, eventos e programas internos)
+    value: R$ 599,00/mês
+  - title: STUDIO
+    access_hours: Todos os dias, 24hrs por dia
+    access_type: Liberação automática através de biometria
+    mail: Gerenciamento de correspondência
+    internet: Acesso a internet de alta velocidade
+    receive_phone_calls: Atendimento telefônico padrão (anotar recados e passar a ligação)
+    make_phone_calls: Uso livre do telefone para ligações para fixo
+    spot: Sala privativa para até 6 pessoas
+    drawer: Gaveteiro individual
+    reception: Serviço de Recepção padrão (anotar recados e receber clientes)
+    printing: Impressão/Scanner A4 PB sem custo adicional
+    kitchen: Copa de apoio, água e café
+    fliper_market: Fliper Mercado pago  por mês
+    meeting_room: Uso das Salas de Reunião mediante reserva
+    decision_making: Comunidade Fliperama (participação na gestão do espaço, eventos e programas internos)
+    value: R$ 3000,00/mês
+---
+
+<div class="section" id="espaco" style="padding-bottom: 0px">
+  <div class="container text-center">
+    <div class="row justify-content-md-center">
+      <div class="col-md-12 col-lg-8">
+        <h2 class="title">Prepare-se para decolar!!!</h2>
+          <h5 class="description">Seu espaço de negócios e relacionamento. Aqui você tem espaço para estabelecer seu negócio, começar sua start-up, fazer reuniões, empreender crescer e decolar.</h5>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
+    <h3 class="title">{{ page.title }}</h3>
+    <table class="table text-center">
+      <thead>
+        <tr>
+          {% for service in page.services %}
+            <th class="text-center">{{ service.title }}</th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="6">
+            <h8 class="title pull-left">Acesso</h8>
+          </td>
+        </tr>
+        <tr>
+          {% for service in page.services %}
+            {% if service.access_hours %}
+              <td>{{ service.access_hours }}</td>
+            {% else %}
+              <td> - </td>
+            {% endif %}
+          {% endfor %}
+        </tr>
+        <tr>
+          {% for service in page.services %}
+            {% if service.access_type %}
+              <td>{{ service.access_type }}</td>
+            {% else %}
+              <td> - </td>
+            {% endif %}
+          {% endfor %}
+        </tr>
+        <tr>
+          <td colspan="6">
+            <h8 class="title pull-left">Correspondência</h8>
+          </td>
+        </tr>
+        <tr>
+          {% for service in page.services %}
+            {% if service.mail %}
+              <td>{{ service.mail }}</td>
+            {% else %}
+              <td> - </td>
+            {% endif %}
+          {% endfor %}
+        </tr>
+        <tr>
+          <td colspan="6">
+            <h8 class="title pull-left">Internet / Telefone</h8>
+          </td>
+        </tr>
+        <tr>
+          {% for service in page.services %}
+            {% if service.internet %}
+              <td>{{ service.internet }}</td>
+            {% else %}
+              <td> - </td>
+            {% endif %}
+          {% endfor %}
+        </tr>
+        <tr>
+          {% for service in page.services %}
+            {% if service.receive_phone_calls %}
+              <td>{{ service.receive_phone_calls }}</td>
+            {% else %}
+              <td> - </td>
+            {% endif %}
+          {% endfor %}
+        </tr>
+        <tr>
+          {% for service in page.services %}
+            {% if service.make_phone_calls %}
+              <td>{{ service.make_phone_calls }}</td>
+            {% else %}
+              <td> - </td>
+            {% endif %}
+          {% endfor %}
+        </tr>
+        <tr>
+          <td colspan="6">
+            <h8 class="title pull-left">Espaço</h8>
+          </td>
+        </tr>
+        <tr>
+          {% for service in page.services %}
+            {% if service.spot %}
+              <td>{{ service.spot }}</td>
+            {% else %}
+              <td> - </td>
+            {% endif %}
+          {% endfor %}
+        </tr>
+        <tr>
+          {% for service in page.services %}
+            {% if service.drawer %}
+              <td>{{ service.drawer }}</td>
+            {% else %}
+              <td> - </td>
+            {% endif %}
+          {% endfor %}
+        </tr>
+        <tr>
+          {% for service in page.services %}
+            {% if service.recepetion %}
+              <td>{{ service.recepetion }}</td>
+            {% else %}
+              <td> - </td>
+            {% endif %}
+          {% endfor %}
+        </tr>
+        <tr>
+          {% for service in page.services %}
+            {% if service.printing %}
+              <td>{{ service.printing }}</td>
+            {% else %}
+              <td> - </td>
+            {% endif %}
+          {% endfor %}
+        </tr>
+        <tr>
+          {% for service in page.services %}
+            {% if service.kitchen %}
+              <td>{{ service.kitchen }}</td>
+            {% else %}
+              <td> - </td>
+            {% endif %}
+          {% endfor %}
+        </tr>
+        <tr>
+          {% for service in page.services %}
+            {% if service.fliper_market %}
+              <td>{{ service.fliper_market }}</td>
+            {% else %}
+              <td> - </td>
+            {% endif %}
+          {% endfor %}
+        </tr>
+        <tr>
+          {% for service in page.services %}
+            {% if service.decision_making %}
+              <td>{{ service.decision_making }}</td>
+            {% else %}
+              <td> - </td>
+            {% endif %}
+          {% endfor %}
+        </tr>
+        <tr>
+          <td colspan="6">
+            <h8 class="title pull-left">Valores</h8>
+          </td>
+        </tr>
+        <tr>
+          {% for service in page.services %}
+            <td>{{ service.value }}</td>
+          {% endfor %}
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="section">
+  <div class="container">
+    <h3 class="title">{{ page.spaces }}</h3>
+    <table class="table text-center">
+      <thead>
+        <tr>
+          {% for room in page.rooms %}
+            <th class="text-center">{{ room.title }}</th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          {% for room in page.rooms %}
+            <td class="text-center">{{ room.capacity }} pessoas</td>
+          {% endfor %}
+        </tr>
+        <tr>
+          {% for room in page.rooms %}
+            {% if room.kitchen %}
+              <td class="text-center">Copa de apoio, água e café</td>
+            {% else %}
+              <td class="text-center"> - </td>
+            {% endif %}
+          {% endfor %}
+        </tr>
+        <tr>
+          {% for room in page.rooms %}
+            {% if room.internet %}
+              <td class="text-center">Acesso a internet</td>
+            {% else %}
+              <td class="text-center"> - </td>
+            {% endif %}
+          {% endfor %}
+        </tr>
+        <tr>
+          {% for room in page.rooms %}
+            {% if room.private_bathroom %}
+              <td class="text-center">Banheiro privativo</td>
+            {% else %}
+              <td class="text-center"> - </td>
+            {% endif %}
+          {% endfor %}
+        </tr>
+        <tr>
+          {% for room in page.rooms %}
+            {% if room.media %}
+              <td class="text-center">TV, Projetor, Flipchart</td>
+            {% else %}
+              <td class="text-center"> - </td>
+            {% endif %}
+          {% endfor %}
+        </tr>
+        <tr>
+          {% for room in page.rooms %}
+            {% if room.private_fridge %}
+              <td class="text-center">Frigobar</td>
+            {% else %}
+              <td class="text-center"> - </td>
+            {% endif %}
+          {% endfor %}
+        </tr>
+        <tr>
+          <td colspan="4">
+            <h8 class="title pull-left">Horário comercial</h8>
+          </td>
+        </tr>
+        <tr>
+          {% for room in page.rooms %}
+            <td class="text-center">R$ {{ room.value_business_hours }}</td>
+          {% endfor %}
+        </tr>
+        <tr>
+          <td colspan="4">
+            <h8 class="title pull-left">Horário noturno e finais de semana</h8>
+          </td>
+        </tr>
+        <tr>
+          {% for room in page.rooms %}
+            <td class="text-center">R$ {{ room.value_weekends }}</td>
+          {% endfor %}
+        </tr>
+        <tr>
+          <td colspan="4">
+            <p class="pull-right footnote">*mínimo de 4 horas</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
