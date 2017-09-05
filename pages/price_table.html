@@ -57,7 +57,8 @@ services:
     fliper_market:
     meeting_room: Uso das Salas de Reunião mediante reserva e pagamento à parte
     decision_making:
-    value: R$ 80,00/mês ou R$ 800,00/ano
+    value: R$ 80,00/mês ou
+    value_two: R$ 800,00/ano
   - title: HORA LIVRE
     access_hours: Dias Úteis em Horário Comercial 8h às 18h
     access_type: Cartão na recepção do prédio a cada entrada/saída
@@ -307,7 +308,7 @@ services:
         </tr>
         <tr>
           {% for service in page.services %}
-            <td>{{ service.value }}</td>
+            <td>{{ service.value }}<br>{{service.value_two}}</td>
           {% endfor %}
         </tr>
       </tbody>
