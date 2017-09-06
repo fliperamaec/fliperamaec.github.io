@@ -57,7 +57,8 @@ services:
     fliper_market:
     meeting_room: Uso das Salas de Reunião mediante reserva e pagamento à parte
     decision_making:
-    value: R$ 80,00/mês ou R$ 800,00/ano
+    value: R$ 80,00/mês ou
+    value_two: R$ 800,00/ano
   - title: HORA LIVRE
     access_hours: Dias Úteis em Horário Comercial 8h às 18h
     access_type: Cartão na recepção do prédio a cada entrada/saída
@@ -140,7 +141,7 @@ services:
     value: R$ 3000,00/mês
 ---
 
-<div class="section" id="espaco" style="padding-bottom: 0px">
+<div class="section" id="espaco">
   <div class="container text-center">
     <div class="row justify-content-md-center">
       <div class="col-md-12 col-lg-8">
@@ -173,7 +174,7 @@ services:
             {% if service.access_hours %}
               <td>{{ service.access_hours }}</td>
             {% else %}
-              <td> - </td>
+              <td> – </td>
             {% endif %}
           {% endfor %}
         </tr>
@@ -182,7 +183,7 @@ services:
             {% if service.access_type %}
               <td>{{ service.access_type }}</td>
             {% else %}
-              <td> - </td>
+              <td> – </td>
             {% endif %}
           {% endfor %}
         </tr>
@@ -196,7 +197,7 @@ services:
             {% if service.mail %}
               <td>{{ service.mail }}</td>
             {% else %}
-              <td> - </td>
+              <td> – </td>
             {% endif %}
           {% endfor %}
         </tr>
@@ -210,7 +211,7 @@ services:
             {% if service.internet %}
               <td>{{ service.internet }}</td>
             {% else %}
-              <td> - </td>
+              <td> – </td>
             {% endif %}
           {% endfor %}
         </tr>
@@ -219,7 +220,7 @@ services:
             {% if service.receive_phone_calls %}
               <td>{{ service.receive_phone_calls }}</td>
             {% else %}
-              <td> - </td>
+              <td> – </td>
             {% endif %}
           {% endfor %}
         </tr>
@@ -228,7 +229,7 @@ services:
             {% if service.make_phone_calls %}
               <td>{{ service.make_phone_calls }}</td>
             {% else %}
-              <td> - </td>
+              <td> – </td>
             {% endif %}
           {% endfor %}
         </tr>
@@ -242,7 +243,7 @@ services:
             {% if service.spot %}
               <td>{{ service.spot }}</td>
             {% else %}
-              <td> - </td>
+              <td> – </td>
             {% endif %}
           {% endfor %}
         </tr>
@@ -251,7 +252,7 @@ services:
             {% if service.drawer %}
               <td>{{ service.drawer }}</td>
             {% else %}
-              <td> - </td>
+              <td> – </td>
             {% endif %}
           {% endfor %}
         </tr>
@@ -260,7 +261,7 @@ services:
             {% if service.recepetion %}
               <td>{{ service.recepetion }}</td>
             {% else %}
-              <td> - </td>
+              <td> – </td>
             {% endif %}
           {% endfor %}
         </tr>
@@ -269,7 +270,7 @@ services:
             {% if service.printing %}
               <td>{{ service.printing }}</td>
             {% else %}
-              <td> - </td>
+              <td> – </td>
             {% endif %}
           {% endfor %}
         </tr>
@@ -278,7 +279,7 @@ services:
             {% if service.kitchen %}
               <td>{{ service.kitchen }}</td>
             {% else %}
-              <td> - </td>
+              <td> – </td>
             {% endif %}
           {% endfor %}
         </tr>
@@ -287,7 +288,7 @@ services:
             {% if service.fliper_market %}
               <td>{{ service.fliper_market }}</td>
             {% else %}
-              <td> - </td>
+              <td> – </td>
             {% endif %}
           {% endfor %}
         </tr>
@@ -296,7 +297,7 @@ services:
             {% if service.decision_making %}
               <td>{{ service.decision_making }}</td>
             {% else %}
-              <td> - </td>
+              <td> – </td>
             {% endif %}
           {% endfor %}
         </tr>
@@ -307,7 +308,7 @@ services:
         </tr>
         <tr>
           {% for service in page.services %}
-            <td>{{ service.value }}</td>
+            <td>{{ service.value }}<br>{{service.value_two}}</td>
           {% endfor %}
         </tr>
       </tbody>
@@ -337,7 +338,7 @@ services:
             {% if room.kitchen %}
               <td class="text-center">Copa de apoio, água e café</td>
             {% else %}
-              <td class="text-center"> - </td>
+              <td class="text-center"> – </td>
             {% endif %}
           {% endfor %}
         </tr>
@@ -346,7 +347,7 @@ services:
             {% if room.internet %}
               <td class="text-center">Acesso a internet</td>
             {% else %}
-              <td class="text-center"> - </td>
+              <td class="text-center"> – </td>
             {% endif %}
           {% endfor %}
         </tr>
@@ -355,7 +356,7 @@ services:
             {% if room.private_bathroom %}
               <td class="text-center">Banheiro privativo</td>
             {% else %}
-              <td class="text-center"> - </td>
+              <td class="text-center"> – </td>
             {% endif %}
           {% endfor %}
         </tr>
@@ -364,7 +365,7 @@ services:
             {% if room.media %}
               <td class="text-center">TV, Projetor, Flipchart</td>
             {% else %}
-              <td class="text-center"> - </td>
+              <td class="text-center"> – </td>
             {% endif %}
           {% endfor %}
         </tr>
@@ -373,7 +374,7 @@ services:
             {% if room.private_fridge %}
               <td class="text-center">Frigobar</td>
             {% else %}
-              <td class="text-center"> - </td>
+              <td class="text-center"> – </td>
             {% endif %}
           {% endfor %}
         </tr>

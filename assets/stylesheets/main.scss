@@ -99,7 +99,18 @@
   }
 }
 
+//SPACE
+#espaco {
+   padding-bottom: 140px;
+   padding-top: 140px;
+}
+
 // CAROUSEL
+#carousel {
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+
 .carousel-item {
   .item-description {
     position: absolute;
@@ -163,14 +174,30 @@
 }
 
 // FOOTER
-.social-media {
-  font-size: 40px;
-  color: blue;
-}
+.footer {
+  padding-top: 70px;
 
-.google-map {
-  width:100%;
-  height:400px;
+  .row {
+    margin-top: 7px;
+  }
+
+  .social-media {
+    font-size: 40px;
+    color: rgb(87, 86, 86);
+  }
+
+  .google-map {
+    width:100%;
+    height:400px;
+  }
+
+  .copyright {
+    padding-top: 25px;
+
+    i {
+      color: red;
+    }
+  }
 }
 
 // TAG INDEX
@@ -235,4 +262,8 @@
 .footnote {
    font-size: 12px;
    font-weight: bold;
+}
+
+.table td {
+  vertical-align: middle;
 }
