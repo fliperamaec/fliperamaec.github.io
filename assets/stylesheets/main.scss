@@ -181,6 +181,10 @@
     margin-top: 7px;
   }
 
+  .contact-icon {
+    color: rgb(87, 86, 86);
+  }
+
   .social-media {
     font-size: 40px;
     color: rgb(87, 86, 86);
@@ -266,4 +270,56 @@
 
 .table td {
   vertical-align: middle;
+}
+
+.services-table {
+  .table-header {
+    position: sticky;
+    top: 64px;
+    background-color: white;
+    z-index: 1020;
+    font-weight: bold;
+    border: solid;
+    border-top: white;
+    border-left: white;
+    border-right: white;
+    border-radius: 9px;
+    border-width: thin;
+    border-color: rgb(190, 190, 190);
+  }
+  .title {
+    font-weight: bold;
+  }
+  h3 .subtitle {
+    font-weight: normal;
+  }
+  .values {
+    padding-top: 15px;
+  }
+}
+
+.spaces-table {
+  .table-header {
+    position: sticky;
+    top: 64px;
+    background-color: white;
+    z-index: 1020;
+    font-weight: bold;
+    border: solid;
+    border-top: white;
+    border-left: white;
+    border-right: white;
+    border-radius: 9px;
+    border-width: thin;
+    border-color: rgb(190, 190, 190);
+  }
+  .title {
+    font-weight: bold;
+  }
+  h3 .subtitle {
+    font-weight: normal;
+  }
+  .values {
+    padding-top: 15px;
+  }
 }
