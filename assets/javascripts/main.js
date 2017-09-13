@@ -47,9 +47,20 @@
     });
   }
 
+  function initHighlights() {
+    $('.column-value, .column-title').on('mouseover', function() {
+      var cointainer = $(this).parents('.container');
+      cointainer.find('.column-value').removeClass('highlight')
+      cointainer.find('.column-title').removeClass('highlight')
+      cointainer.find('.column-value:nth-child('+ ($(this).index() + 1) +')').addClass('highlight')
+      cointainer.find('.column-title:nth-child('+ ($(this).index() + 1) +')').addClass('highlight')
+    })
+  }
+
   $(function() {
     initAnchorLinks();
     scrollToTopOnVisit();
     myMap();
+    initHighlights();
   })
 })(jQuery);

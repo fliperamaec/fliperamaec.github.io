@@ -39,8 +39,8 @@ rooms:
     private_bathroom: yes
     media: yes
     private_fridge:
-    value_business_hours: 120/hora*
-    value_weekends: 150/hora*
+    value_business_hours: Sob Consulta
+    value_weekends: Sob Consulta
 services:
   - title: Endereço Fiscal
     access_hours:
@@ -157,7 +157,7 @@ services:
     <h3 class="title">{{ page.title }}</h3>
     <div class="row table-header">
       {% for service in page.services %}
-        <div class="col-sm-2 text-center" style="text-transform: capitalize;">
+        <div class="col-sm-2 text-center column-title" style="text-transform: capitalize;">
           <h4>{{ service.title }}</h4>
         </div>
       {% endfor %}
@@ -170,18 +170,18 @@ services:
     <div class="row values">
       {% for service in page.services %}
         {% if service.access_hours %}
-          <div class="col-sm-2 text-center">{{ service.access_hours }}</div>
+          <div class="col-sm-2 text-center column-value">{{ service.access_hours }}</div>
         {% else %}
-          <div class="col-sm-2 text-center"> – </div>
+          <div class="col-sm-2 text-center column-value"> – </div>
         {% endif %}
       {% endfor %}
     </div>
     <div class="row values">
       {% for service in page.services %}
         {% if service.access_type %}
-          <div class="col-sm-2 text-center">{{ service.access_type }}</div>
+          <div class="col-sm-2 text-center column-value">{{ service.access_type }}</div>
         {% else %}
-          <div class="col-sm-2 text-center"> – </div>
+          <div class="col-sm-2 text-center column-value"> – </div>
         {% endif %}
       {% endfor %}
     </div>
@@ -193,9 +193,9 @@ services:
     <div class="row values">
       {% for service in page.services %}
         {% if service.mail %}
-          <div class="col-sm-2 text-center">{{ service.mail }}</div>
+          <div class="col-sm-2 text-center column-value">{{ service.mail }}</div>
         {% else %}
-          <div class="col-sm-2 text-center"> – </div>
+          <div class="col-sm-2 text-center column-value"> – </div>
         {% endif %}
       {% endfor %}
     </div>
@@ -207,27 +207,27 @@ services:
     <div class="row values">
       {% for service in page.services %}
         {% if service.internet %}
-          <div class="col-sm-2 text-center">{{ service.internet }}</div>
+          <div class="col-sm-2 text-center column-value">{{ service.internet }}</div>
         {% else %}
-          <div class="col-sm-2 text-center"> – </div>
+          <div class="col-sm-2 text-center column-value"> – </div>
         {% endif %}
       {% endfor %}
     </div>
     <div class="row values">
       {% for service in page.services %}
         {% if service.receive_phone_calls %}
-          <div class="col-sm-2 text-center">{{ service.receive_phone_calls }}</div>
+          <div class="col-sm-2 text-center column-value">{{ service.receive_phone_calls }}</div>
         {% else %}
-          <div class="col-sm-2 text-center"> – </div>
+          <div class="col-sm-2 text-center column-value"> – </div>
         {% endif %}
       {% endfor %}
     </div>
     <div class="row values">
       {% for service in page.services %}
         {% if service.make_phone_calls %}
-          <div class="col-sm-2 text-center">{{ service.make_phone_calls }}</div>
+          <div class="col-sm-2 text-center column-value">{{ service.make_phone_calls }}</div>
         {% else %}
-          <div class="col-sm-2 text-center"> – </div>
+          <div class="col-sm-2 text-center column-value"> – </div>
         {% endif %}
       {% endfor %}
     </div>
@@ -239,63 +239,63 @@ services:
     <div class="row values">
       {% for service in page.services %}
         {% if service.spot %}
-          <div class="col-sm-2 text-center">{{ service.spot }}</div>
+          <div class="col-sm-2 text-center column-value">{{ service.spot }}</div>
         {% else %}
-          <div class="col-sm-2 text-center"> – </div>
+          <div class="col-sm-2 text-center column-value"> – </div>
         {% endif %}
       {% endfor %}
     </div>
     <div class="row values">
       {% for service in page.services %}
         {% if service.drawer %}
-          <div class="col-sm-2 text-center">{{ service.drawer }}</div>
+          <div class="col-sm-2 text-center column-value">{{ service.drawer }}</div>
         {% else %}
-          <div class="col-sm-2 text-center"> – </div>
+          <div class="col-sm-2 text-center column-value"> – </div>
         {% endif %}
       {% endfor %}
     </div>
     <div class="row values">
       {% for service in page.services %}
         {% if service.reception %}
-          <div class="col-sm-2 text-center">{{ service.reception }}</div>
+          <div class="col-sm-2 text-center column-value">{{ service.reception }}</div>
         {% else %}
-          <div class="col-sm-2 text-center"> – </div>
+          <div class="col-sm-2 text-center column-value"> – </div>
         {% endif %}
       {% endfor %}
     </div>
     <div class="row values">
       {% for service in page.services %}
         {% if service.printing %}
-          <div class="col-sm-2 text-center">{{ service.printing }}</div>
+          <div class="col-sm-2 text-center column-value">{{ service.printing }}</div>
         {% else %}
-          <div class="col-sm-2 text-center"> – </div>
+          <div class="col-sm-2 text-center column-value"> – </div>
         {% endif %}
       {% endfor %}
     </div>
     <div class="row values">
       {% for service in page.services %}
         {% if service.kitchen %}
-          <div class="col-sm-2 text-center">{{ service.kitchen }}</div>
+          <div class="col-sm-2 text-center column-value">{{ service.kitchen }}</div>
         {% else %}
-          <div class="col-sm-2 text-center"> – </div>
+          <div class="col-sm-2 text-center column-value"> – </div>
         {% endif %}
       {% endfor %}
     </div>
     <div class="row values">
       {% for service in page.services %}
         {% if service.fliper_market %}
-          <div class="col-sm-2 text-center">{{ service.fliper_market }}</div>
+          <div class="col-sm-2 text-center column-value">{{ service.fliper_market }}</div>
         {% else %}
-          <div class="col-sm-2 text-center"> – </div>
+          <div class="col-sm-2 text-center column-value"> – </div>
         {% endif %}
       {% endfor %}
     </div>
     <div class="row values">
       {% for service in page.services %}
         {% if service.decision_making %}
-          <div class="col-sm-2 text-center">{{ service.decision_making }}</div>
+          <div class="col-sm-2 text-center column-value">{{ service.decision_making }}</div>
         {% else %}
-          <div class="col-sm-2 text-center"> – </div>
+          <div class="col-sm-2 text-center column-value"> – </div>
         {% endif %}
       {% endfor %}
     </div>
@@ -306,7 +306,7 @@ services:
     </div>
     <div class="row values">
       {% for service in page.services %}
-        <div class="col-sm-2 text-center">{{ service.value }}<br>{{service.value_two}}</div>
+        <div class="col-sm-2 text-center column-value">{{ service.value }}<br>{{service.value_two}}</div>
       {% endfor %}
     </div>
   </div>
@@ -317,58 +317,58 @@ services:
     <h3 class="title">{{ page.spaces }}</h3>
     <div class="row table-header">
       {% for room in page.rooms %}
-        <div class="col-sm-3 text-center" style="text-transform: capitalize;">
+        <div class="col-sm-3 text-center column-value" style="text-transform: capitalize;">
           <h4>{{ room.title }}</h4>
         </div>
       {% endfor %}
     </div>
     <div class="row values">
       {% for room in page.rooms %}
-        <div class="col-sm-3 text-center">{{ room.capacity }} pessoas</div>
+        <div class="col-sm-3 text-center column-value">{{ room.capacity }} pessoas</div>
       {% endfor %}
     </div>
     <div class="row values">
       {% for room in page.rooms %}
         {% if room.kitchen %}
-          <div class="col-sm-3 text-center">Copa de apoio, água e café</div>
+          <div class="col-sm-3 text-center column-value">Copa de apoio, água e café</div>
         {% else %}
-          <div class="col-sm-3 text-center"> – </div>
+          <div class="col-sm-3 text-center column-value"> – </div>
         {% endif %}
       {% endfor %}
     </div>
     <div class="row values">
       {% for room in page.rooms %}
         {% if room.internet %}
-          <div class="col-sm-3 text-center">Acesso a internet</div>
+          <div class="col-sm-3 text-center column-value">Acesso a internet</div>
         {% else %}
-          <div class="col-sm-3 text-center"> – </div>
+          <div class="col-sm-3 text-center column-value"> – </div>
         {% endif %}
       {% endfor %}
     </div>
     <div class="row values">
       {% for room in page.rooms %}
         {% if room.private_bathroom %}
-          <div class="col-sm-3 text-center">Banheiro privativo</div>
+          <div class="col-sm-3 text-center column-value">Banheiro privativo</div>
         {% else %}
-          <div class="col-sm-3 text-center"> – </div>
+          <div class="col-sm-3 text-center column-value"> – </div>
         {% endif %}
       {% endfor %}
     </div>
     <div class="row values">
       {% for room in page.rooms %}
         {% if room.media %}
-          <div class="col-sm-3 text-center">TV, Projetor, Flipchart</div>
+          <div class="col-sm-3 text-center column-value">TV, Projetor, Flipchart</div>
         {% else %}
-          <div class="col-sm-3 text-center"> – </div>
+          <div class="col-sm-3 text-center column-value"> – </div>
         {% endif %}
       {% endfor %}
     </div>
     <div class="row values">
       {% for room in page.rooms %}
         {% if room.private_fridge %}
-          <div class="col-sm-3 text-center">Frigobar</div>
+          <div class="col-sm-3 text-center column-value">Frigobar</div>
         {% else %}
-          <div class="col-sm-3 text-center"> – </div>
+          <div class="col-sm-3 text-center column-value"> – </div>
         {% endif %}
       {% endfor %}
     </div>
@@ -384,7 +384,7 @@ services:
     </div>
     <div class="row">
       {% for room in page.rooms %}
-        <div class="col-sm-3 text-center">R$ {{ room.value_business_hours }}</div>
+        <div class="col-sm-3 text-center column-value">{{ room.value_business_hours }}</div>
       {% endfor %}
     </div>
     <div class="row">
@@ -399,8 +399,13 @@ services:
     </div>
     <div class="row">
       {% for room in page.rooms %}
-        <div class="col-sm-3 text-center">R$ {{ room.value_weekends }}</div>
+        <div class="col-sm-3 text-center column-value">{{ room.value_weekends }}</div>
       {% endfor %}
     </div>
   </div>
 </div>
+
+
+<script type="text/javascript">
+
+</script>
