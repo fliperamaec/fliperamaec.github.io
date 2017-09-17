@@ -49,11 +49,12 @@
 
   function initHighlights() {
     $('.column-value, .column-title').on('mouseover', function() {
-      var cointainer = $(this).parents('.container');
-      cointainer.find('.column-value').removeClass('highlight')
-      cointainer.find('.column-title').removeClass('highlight')
-      cointainer.find('.column-value:nth-child('+ ($(this).index() + 1) +')').addClass('highlight')
-      cointainer.find('.column-title:nth-child('+ ($(this).index() + 1) +')').addClass('highlight')
+      var cointainer = $(this).parents('.container'),
+          cells      = $.merge(cointainer.find('.column-value'), cointainer.find('.column-title')),
+          childIndex = $(this).index() + 1;
+
+      cells.removeClass('highlight');
+      cells.filter(':nth-child('+ childIndex +')').addClass('highlight');
     })
   }
 
