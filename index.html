@@ -5,27 +5,32 @@ slides:
     title: SPOT
     description: Seja um Fliper e conheça nosso espaço. Ambiente Profissional 24 horas com Segurança e Comodidade. Colaboração e Networking. Endereço Comercial e Fiscal. Planos Facilitados e Adaptáveis ao seu perfil.
     link: /price_table.html
-    slide_number: 0
+    number: 0
+    planet: assets/images/gray-planet.png
   - picture: assets/images/auditorio.jpg
     title: AUDITÓRIO
     description: Auditório para até 50 pessoas. Espaço para descompressão e confraternização. Sala de Treinamento, Palestras e Workshop. Televisão, home theater, internet fibra-ótica, banheiro independente ótima localização e muito mais.
     link: /price_table.html
-    slide_number: 1
+    number: 1
+    planet: assets/images/blue-planet.png
   - picture: assets/images/salas-reuniao.jpg
     title: SALAS DE REUNIÃO
     description: Salas multi-uso, salas de jogos, salas de reunião grande, média e pequena. Podendo se adaptar conforme cada necessidade. Wi-Fi, cozinha e Recepção.
     link: /price_table.html
-    slide_number: 2
+    number: 2
+    planet: assets/images/red-planet.png
   - picture: assets/images/endereco-fiscal.jpg
     title: ENDEREÇO FISCAL
     description: Endereço Fiscal e Comercial. Recepcionista, Telefone, Recados. Ótima Localização com Praça de Alimentação do BIG da Beira Rio -400m  + dois restaurantes -200m. 3 Opções de Estacionamento nos arredores.
     link: /price_table.html
-    slide_number: 3
+    number: 3
+    planet: assets/images/green-planet.png
   - picture: assets/images/sala-privativa.jpg
     title: SALAS PRIVATIVAS
     description: Salas Privativas para até 6 SPOTS. Melhor custo benefício. Ambiente profissional. Comodidade e descontração. 24 horas. Colaboração e Networking. Internet Fibra ótica. 18 metros quadrados.
     link: /price_table.html
-    slide_number: 4
+    number: 4
+    planet: assets/images/yelow-planet.png
 ---
 
 <header class="hero">
@@ -59,7 +64,7 @@ slides:
         {% else %}
           {% assign class = '' %}
         {% endif %}
-        <li data-target="#carouselExampleControls" data-slide-to="{{ slide.slide_number }}" class="{{class}}"></li>
+        <li data-target="#carouselExampleControls" data-slide-to="{{ slide.number }}" class="{{ class }}"><img src="{{ slide.planet }}" style="height: 50px; width: 50px;"></li>
       {% endfor %}
     </ol>
 
