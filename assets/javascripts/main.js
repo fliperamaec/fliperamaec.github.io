@@ -47,9 +47,21 @@
     });
   }
 
+  function initHighlights() {
+    $('.column-value, .column-title').on('mouseover', function() {
+      var cointainer = $(this).parents('.container'),
+          cells      = $.merge(cointainer.find('.column-value'), cointainer.find('.column-title')),
+          childIndex = $(this).index() + 1;
+
+      cells.removeClass('highlight');
+      cells.filter(':nth-child('+ childIndex +')').addClass('highlight');
+    })
+  }
+
   $(function() {
     initAnchorLinks();
     scrollToTopOnVisit();
     myMap();
+    initHighlights();
   })
 })(jQuery);
