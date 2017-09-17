@@ -32,6 +32,10 @@
   background-color: rgba(60, 60, 60, 1) !important;
 }
 
+.navbar-collapse:before {
+  background: rgb(60, 60, 60);
+}
+
 // HERO
 .hero {
   background-image: url('/assets/images/hero-background.jpg');
