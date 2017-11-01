@@ -51,51 +51,59 @@ slides:
 </div>
 
 <div class="section" id="carousel">
-  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      {% for slide in page.slides %}
-        {% if forloop.first %}
-          {% assign class = 'active' %}
-        {% else %}
-          {% assign class = '' %}
-        {% endif %}
-        <li data-target="#carouselExampleControls" data-slide-to="{{ slide.slide_number }}" class="{{class}}"></li>
-      {% endfor %}
-    </ol>
+  <div class="container text-center">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        {% for slide in page.slides %}
+          {% if forloop.first %}
+            {% assign class = 'active' %}
+          {% else %}
+            {% assign class = '' %}
+          {% endif %}
+          <li data-target="#carouselExampleControls" data-slide-to="{{ slide.slide_number }}" class="{{class}}"></li>
+        {% endfor %}
+      </ol>
 
-    <div class="carousel-inner" role="listbox">
-      {% for slide in page.slides %}
-        {% if forloop.first %}
-          <div class="carousel-item active">
-        {% else %}
-          <div class="carousel-item">
-        {% endif %}
-          <div class="item-description">
-            <div class="row title position-title-990px">
-              <div class="col-md-12 text-center">{{ slide.title }}</div>
-            </div>
-            <div class="row description hide-990px">
-              <div class="col-md-12 text-center">
-                <p class="">{{ slide.description }}</p>
+      <div class="carousel-inner" role="listbox" style="max-height: 90vh;">
+        {% for slide in page.slides %}
+          {% if forloop.first %}
+            <div class="carousel-item active">
+          {% else %}
+            <div class="carousel-item">
+          {% endif %}
+            <div class="item-description">
+              <div class="row title position-title-990px">
+                <div class="col-md-12 text-center">{{ slide.title }}</div>
+              </div>
+              <div class="row description hide-990px">
+                <div class="col-md-12 text-center">
+                  <p class="">{{ slide.description }}</p>
+                </div>
+              </div>
+              <div class="row link position-link-990px">
+                <div class="col-md-12 text-center">
+                  <a href="{{ slide.link }}">
+                    <div class="text-center">
+                      <button class="btn btn-primary btn-round" style="padding-left: 5px; padding-right: 5px;">
+                        <span class="button-text-990px">
+                          Saiba mais
+                        </span>
+                      </button>
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
-            <div class="row link position-link-990px">
-              <div class="col-md-12 text-center">
-                <a href="{{ slide.link }}">
-                  <button class="btn btn-primary btn-round">Saiba mais</button>
-                </a>
-              </div>
+            <img class="d-block" src="{{ slide.picture }}" alt="First slide">
+            <div class="carousel-caption d-none d-md-block">
             </div>
           </div>
-          <img class="d-block" src="{{ slide.picture }}" alt="First slide">
-          <div class="carousel-caption d-none d-md-block">
-          </div>
-        </div>
-      {% endfor %}
+        {% endfor %}
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      </a>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    </a>
   </div>
 </div>
