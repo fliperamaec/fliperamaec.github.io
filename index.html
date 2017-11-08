@@ -52,7 +52,7 @@ slides:
 
 <div class="section" id="carousel">
   <div class="container text-center">
-    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-pause="true">
       <ol class="carousel-indicators">
         {% for slide in page.slides %}
           {% if forloop.first %}
@@ -80,19 +80,8 @@ slides:
                   <p class="">{{ slide.description }}</p>
                 </div>
               </div>
-              <div class="row link position-link-990px">
-                <div class="col-md-12 text-center">
-                  <a href="{{ slide.link }}">
-                    <div class="text-center">
-                      <button class="btn btn-primary btn-round" style="padding-left: 5px; padding-right: 5px;">
-                        <span class="button-text-990px">
-                          Saiba mais
-                        </span>
-                      </button>
-                    </div>
-                  </a>
-                </div>
-              </div>
+                  <a href="{{ slide.link }}" class="carousel-btn">Saiba mais</a>
+
             </div>
             <img class="d-block" src="{{ slide.picture }}" alt="First slide">
             <div class="carousel-caption d-none d-md-block">
